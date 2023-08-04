@@ -99,7 +99,7 @@ class DigitalTimer extends Component {
       this.setState({timeElapsedInSeconds: 0})
     }
     if (isTimerRunning) {
-      this.clearTimeInterval()
+      this.clearTimerInterval()
     } else {
       this.intervalId = setInterval(this.incrementTimeElapsedInSeconds, 1000)
     }
@@ -113,7 +113,7 @@ class DigitalTimer extends Component {
       ? 'https://assets.ccbp.in/frontend/react-js/play-icon-img.png'
       : 'https://assets.ccbp.in/frontend/react-js/pause-icon-img.png'
 
-    const startOrPauseAlt = isTimerRunning ? 'play icon' : 'pause icon'
+    const startOrPauseAlt = isTimerRunning ? 'pause icon' : 'play icon'
 
     return (
       <div className="timer-controller-container">
